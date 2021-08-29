@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Website</title>
+    <title>Personal Website</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <header>
+      <%= link_to "Home", root_url %>
+      <%= link_to "Projects", projects_index_url %>
+      <%= link_to "Blog", blog_index_url %>
+    </header>
     <%= yield %>
   </body>
 </html>
