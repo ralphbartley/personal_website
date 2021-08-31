@@ -1,0 +1,2 @@
+class BaseDesign < ApplicationRecord
+end

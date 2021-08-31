@@ -18,3 +18,7 @@
 ActiveSupport::Inflector.inflections(:en) do |inflect|
     inflect.irregular 'post', 'blog'
 end
+
+ActiveSupport::Inflector.inflections(:en) do |inflect|
+    inflect.irregular 'base_design', 'base_buddy'
+end

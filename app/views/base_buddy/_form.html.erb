@@ -1,0 +1,27 @@
+<%= form_with(model: base_design) do |form| %>
+  <% if base_design.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(base_design.errors.count, "error") %> prohibited this base_design from being saved:</h2>
+
+      <ul>
+        <% base_design.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.text_area :data %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
