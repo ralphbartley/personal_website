@@ -2,6 +2,26 @@
 
 <h1>Base Buddy</h1>
 
+<div id="svg_container">
+  <svg viewBox="-200 -200 400 400" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="square" width="40" height="40">
+      <rect width="40" height="40"
+            fill="none"
+            stroke="black"
+            stroke-width="2"/>
+    </symbol>
+    <symbol id="triangle" width="40" height="40">
+      <polygon points="0,0 20,40 40,0" 
+               fill="none"
+               stroke="black"/>
+    </symbol>
+    
+    <use href="#square" x="-20" y="-20"/>
+    <use href="#square" x="20" y="-20"/>
+    <use href="#triangle" x="-20" y="20"/>
+  </svg>
+</div>
+
 <table>
   <thead>
     <tr>
@@ -10,7 +30,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @base_buddy.each do |base_design| %>
       <tr>

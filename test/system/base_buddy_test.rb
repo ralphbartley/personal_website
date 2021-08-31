@@ -42,4 +42,6 @@ class BaseDesignsTest < ApplicationSystemTestCase
 
     assert_text "Base design was successfully destroyed"
   end
+
+
 end

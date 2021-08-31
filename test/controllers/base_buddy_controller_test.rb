@@ -45,4 +45,14 @@ class BaseBuddyControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to base_buddy_url
   end
+
+  test "page should contain an svg element" do
+    get base_buddy_url
+    assert_select "svg"
+  end
+
+  test "page should contain a square svg symbol" do
+    get base_buddy_url
+    assert_select "symbol", id: "square"
+  end
 end
