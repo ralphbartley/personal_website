@@ -4,6 +4,7 @@ class BaseBuddyController < ApplicationController
   # GET /base_buddy or /base_buddy.json
   def index
     @base_buddy = BaseDesign.all
+    @base = BaseDesign.find_by title: 'Tutorial'
   end
 
   # GET /base_buddy/1 or /base_buddy/1.json

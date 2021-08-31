@@ -3,7 +3,7 @@
 <h1>Base Buddy</h1>
 
 <div id="svg_container">
-  <svg viewBox="-200 -200 400 400" xmlns="http://www.w3.org/2000/svg">
+  <svg id="svg" viewBox="-200 -200 400 400" xmlns="http://www.w3.org/2000/svg">
     <symbol id="square" width="40" height="40">
       <rect width="40" height="40"
             fill="none"
@@ -15,10 +15,12 @@
                fill="none"
                stroke="black"/>
     </symbol>
+
+    <rect x="0" y="0" width="1" height="1" />
+
+    <%= draw_svg_data(@base.data) %>
+
     
-    <use href="#square" x="-20" y="-20"/>
-    <use href="#square" x="20" y="-20"/>
-    <use href="#triangle" x="-20" y="20"/>
   </svg>
 </div>
 
