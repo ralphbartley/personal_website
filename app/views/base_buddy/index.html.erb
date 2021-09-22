@@ -7,16 +7,19 @@
     <symbol id="square" width="40" height="40">
       <rect width="40" height="40"
             fill="none"
-            stroke="black"
+            stroke="white"
             stroke-width="2"/>
     </symbol>
     <symbol id="triangle" width="40" height="40">
       <polygon points="0,0 20,40 40,0" 
                fill="none"
-               stroke="black"/>
+               stroke="white"
+               stroke-width="2"/>
     </symbol>
 
-    <rect x="0" y="0" width="1" height="1" />
+    <rect id="center" x="0" y="0" width="1" height="1" stroke="white"/>
+
+    <use href="#square" x="20" y="-20"/>
 
     <%= draw_svg_data(@base.data) %>
 
